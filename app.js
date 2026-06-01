@@ -67,7 +67,7 @@ function deleteNote(noteId) {
   renderNotes();
 }
 document.addEventListener("keydown", (e) => {
-  if (e.ctrlKey && e.key === "n") {
+  if (e.ctrlKey && e.key.toLowerCase() === "n") {
     e.preventDefault();
     openNoteDialog();
   }
@@ -76,7 +76,7 @@ document.addEventListener("keydown", (e) => {
 function renderNotes(notesToRender = notes) {
   const notesContainer = document.getElementById("notesContainer");
 
-  if (notesToRender === 0) {
+  if (notesToRender.length === 0) {
     // show some fall back elements
     notesContainer.innerHTML = `
       <div class="empty-state">
@@ -171,4 +171,8 @@ document.addEventListener("DOMContentLoaded", function () {
         closeNoteDialog();
       }
     });
+
+  document.getElementById("searchInput").addEventListener("input", (e) => {
+    searchNotes(e.target.value);
+  });
 });

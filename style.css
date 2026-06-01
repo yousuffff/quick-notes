@@ -290,9 +290,17 @@ dialog::backdrop {
 }
 
 .empty-state {
+  grid-column: 1 / -1;
+  min-height: 60vh;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   text-align: center;
-  padding: 4rem 2rem;
   color: var(--secondary-text-color);
+  padding: 2rem;
 }
 
 .empty-state h2 {
