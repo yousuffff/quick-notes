@@ -217,7 +217,11 @@ dialog::backdrop {
 .close-btn:hover {
   background: var(--surface-color);
 }
-
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
 .form-group {
   margin-bottom: 1.5rem;
 }
@@ -297,6 +301,21 @@ dialog::backdrop {
 .empty-state p {
   font-size: 1rem;
   margin-bottom: 2rem;
+}
+#searchInput {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  margin-bottom: 2rem;
+  border: 2px solid var(--surface-color);
+  border-radius: 0.75rem;
+  background: var(--surface-color);
+  color: var(--text-color);
+  font: inherit;
+}
+
+#searchInput:focus {
+  outline: none;
+  border-color: var(--brand-color);
 }
 @media (max-width: 600px) {
   body {

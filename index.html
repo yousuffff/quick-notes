@@ -10,11 +10,17 @@
   <body>
     <header>
       <h1>Quick Notes</h1>
-      <div>
+      <div class="header-actions">
         <button class="add-note-btn" onclick="openNoteDialog()">
           + Add Note
         </button>
-        <button id="themeToggleBtn" class="theme-toggle-btn">🌙</button>
+        <button
+          id="themeToggleBtn"
+          class="theme-toggle-btn"
+          aria-label="Toggle theme"
+        >
+          🌙
+        </button>
       </div>
     </header>
     <input id="searchInput" placeholder="Search notes..." />
@@ -28,7 +34,13 @@
       <div class="dialog-content">
         <div class="dialog-header">
           <h2 class="dialog-title" id="dialogTitle">Add New Note</h2>
-          <button class="close-btn" onclick="closeNoteDialog()">x</button>
+          <button
+            class="close-btn"
+            aria-label="Close dialog"
+            onclick="closeNoteDialog()"
+          >
+            ×
+          </button>
         </div>
 
         <form id="noteForm" autocomplete="off">
