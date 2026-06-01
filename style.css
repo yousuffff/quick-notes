@@ -56,6 +56,8 @@ header {
   background: var(--base-transparent-90);
   backdrop-filter: blur(10px);
   padding: 1rem 0;
+  flex-wrap: wrap;
+  gap: 1rem;
 }
 
 .add-note-btn {
@@ -220,7 +222,8 @@ dialog::backdrop {
 .header-actions {
   display: flex;
   align-items: center;
-  gap: 1rem;
+
+  gap: 0.75rem;
 }
 .form-group {
   margin-bottom: 1.5rem;
@@ -331,5 +334,36 @@ dialog::backdrop {
 
   .notes-grid {
     grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 480px) {
+  body {
+    padding: 1rem;
+    margin: 0;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .header-actions {
+    width: 100%;
+    display: flex;
+    gap: 0.75rem;
+  }
+
+  .add-note-btn {
+    flex: 1;
+  }
+
+  .theme-toggle-btn {
+    width: 56px;
+    margin-left: 0;
+  }
+
+  h1 {
+    text-align: center;
+    margin-bottom: 0;
   }
 }
